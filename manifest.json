@@ -1,0 +1,29 @@
+{
+    "manifest_version": 2,
+    "name": "CSCE3444 Accessibility Extension", 
+    "description": "A suite of accessibility features.", 
+    "version": "0.1", 
+    "author": "Ali, Garet, and Spencer",
+
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["content.js"]
+        }
+    ],
+
+    "background": {
+        "scripts": ["background.js", "backgroundContext.js"]
+    },
+
+    "browser_action": {
+    },
+
+    "permissions": [
+        "storage",
+        "contextMenus",
+        "tts"
+    ],
+
+    "options_page": "options.html"
+}
