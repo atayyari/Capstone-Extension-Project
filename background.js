@@ -1,3 +1,6 @@
+importScripts('backgroundContext.js');
+
+
 console.log("Background running...");
 
 //Acts when context menu entry is clicked
@@ -55,7 +58,7 @@ chrome.tabs.onUpdated.addListener( function (tabId, changeInfo, tab) {
   })
 
 //Acts when extension icon is clicked
-chrome.browserAction.onClicked.addListener(IconClicked);
+chrome.action.onClicked.addListener(IconClicked);
 
 //Sends message to activate content.js
 function IconClicked(tab)
